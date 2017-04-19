@@ -19,7 +19,7 @@ form.onsubmit = function() {
     var data = JSON.stringify( getValue(ELEMENTS) );
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open('POST', 'res.php', true);
-    xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xmlhttp.setRequestHeader('Content-Type', 'application/json');
     xmlhttp.send(data);
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4) {
